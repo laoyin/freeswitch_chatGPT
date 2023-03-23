@@ -15,10 +15,13 @@ To install freeswitch-chatGPT, follow these steps:
 
 Clone the repository:
 bash
+`
 Copy code
 git clone https://github.com/laoyin/freeswitch_chatGPT.git
 Install the required Python dependencies:
+`
 Copy code
+`
 pip install -r requirements.txt
 Set up your OpenAI API authentication credentials:
 javascript
@@ -29,7 +32,7 @@ bash
 Copy code
 ./install.sh
 This will create a freeswitch-chatGPT directory in your FreeSWITCH scripts directory, and copy the necessary files there.
-
+`
 Usage
 freeswitch-chatGPT is divided into three stages, each corresponding to one of the project goals stated above. To use each stage, follow these instructions:
 
