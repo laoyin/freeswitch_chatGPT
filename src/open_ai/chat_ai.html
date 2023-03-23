@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Chatbot Demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background-image: url('dlam.webp');
+      /* 添加背景图 */
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .chatbox {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow-y: scroll;
+      padding-bottom: 60px;
+    }
+
+    .message-box {
+      max-width: 320px;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      line-height: 1.5;
+    }
+
+    .user-message {
+      background-color: #fff;
+      color: #000;
+      align-self: flex-end;
+    }
+
+    .bot-message {
+      background-color: #cfe6f8;
+      color: #000;
+      align-self: flex-start;
+    }
+
+    form {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px;
+      display: flex;
+    }
+
+    label {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    input[type="text"] {
+      flex-grow: 3;
+      border: none;
+      outline: none;
+      padding: 10px;
+      border-radius: 20px;
+    }
+
+    button {
+      flex-grow: 1;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      outline: none;
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="chatbox" id="chatbox"></div>
+  <form onsubmit="sendMessage(); return false;">
+    <label for="message">Message:</label>
+    <input type="text" id="message" name="message">
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    const chatbox = document.getElementById('chatbox');
+    const messageInput = document.getElementById('message');
+    const addMessage = () => {
+      const botMessage = document.createElement('div');
+      botMessage.classList.add('message-box', 'bot-message');
+      botMessage.textContent = ''
+      chatbox.appendChild(botMessage);
+      console.log("🚀 ~ file: chat_ai.html:104 ~ addMessage ~ botMessage:", botMessage)
+      chatbox.scrollTop = chatbox.scrollHeight;
+      return botMessage;
+    }
+
+    gg3 = new WebSocket("ws://192.168.188.135:10889/ws")
+    let currentMessageBox = null
+    gg3.onmessage = function (evt) {
+      console.log("socket 3 Received  Message: " + evt.data, evt.data == '--start--');
+      const botMessage = document.createElement('div');
+      botMessage.classList.add('message-box', 'bot-message');
+      botMessage.textContent = evt.data;
+      if (evt.data == '--start--') {
+        currentMessageBox = addMessage();
+        console.log("🚀 ~ file: chat_ai.html:118 ~ currentMessageBox:", currentMessageBox)
+      } else if (evt.data == '--end--') {
+        currentMessageBox = null
+      } else {
+        console.log("🚀 ~ file: chat_ai.html:123 ~ currentMessageBox:", currentMessageBox)
+        currentMessageBox.innerText += evt.data;
+      }
+      setTimeout(() => {
+        chatbox.scrollTop = chatbox.scrollHeight;
+      }, 500);
+
+      messageInput.value = '';
+    };
+    // gg3.send(JSON.stringify({"cmd":"video-login", "username": "15195751900", "user_role": "agent", "callee_num": 1}))
+
+    function sendMessage() {
+      const message = messageInput.value;
+      if (message === '') {
+        return;
+      }
+
+      // 发送用户消息
+      const userMessage = document.createElement('div');
+      userMessage.classList.add('message-box', 'user-message');
+      userMessage.textContent = message;
+      chatbox.appendChild(userMessage);
+      gg3.send(JSON.stringify({ "cmd": "qa", "text": message }));
+      return
+      // 模拟接收到机器人的回复
+      const botMessage = document.createElement('div');
+      botMessage.classList.add('message-box', 'bot-message');
+      botMessage.textContent =
+        setTimeout(() => {
+          chatbox.appendChild(botMessage);
+          chatbox.scrollTop = chatbox.scrollHeight;
+        }, 500);
+
+      messageInput.value = '';
+    }
+  </script>
+</body>
+
+</html>
