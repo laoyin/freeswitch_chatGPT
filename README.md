@@ -9,7 +9,7 @@ freeswitch-chatGPT is an open-source project aimed at integrating FreeSWITCH wit
 open ai
 
 <p align="center">
-<img src="https://github.com/worktool/.gif"  height="500" width="220">
+<img src="https://github.com/laoyin/freeswitch_chatGPT/blob/main/src/open_ai/7_1679898071.gif"  height="500" width="220">
 </p>
 
 
