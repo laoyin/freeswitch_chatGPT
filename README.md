@@ -1,4 +1,5 @@
 # freeswitch_chatGPT
+English | [简体中文](./ZH-README.md)
 Using ChatGPT to connect with FreeSWITCH, creating an intelligent phone robot.
 
 
