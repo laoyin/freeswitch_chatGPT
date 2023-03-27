@@ -65,5 +65,4 @@ async def ws(request: Request, ws: Websocket):
 
 
 
-if __name__ == "__main__":
-    ws_app.run(host="0.0.0.0", port=10889, debug=True)
+

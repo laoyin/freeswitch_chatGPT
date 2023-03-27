@@ -106,7 +106,7 @@
       return botMessage;
     }
 
-    gg3 = new WebSocket("ws://192.168.188.135:10889/ws")
+    gg3 = new WebSocket("ws://127.0.0.1:10889/ws")
     let currentMessageBox = null
     gg3.onmessage = function (evt) {
       console.log("socket 3 Received  Message: " + evt.data, evt.data == '--start--');

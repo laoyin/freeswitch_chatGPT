@@ -5,6 +5,14 @@ Using ChatGPT to connect with FreeSWITCH, creating an intelligent phone robot.
 freeswitch-chatGPT
 freeswitch-chatGPT is an open-source project aimed at integrating FreeSWITCH with OpenAI's Stream API, as well as implementing MRCP-based ASR (Automatic Speech Recognition) and TTS (Text-to-Speech) using FreeSWITCH.
 
+
+open ai
+
+<p align="center">
+<img src="https://github.com/worktool/.gif"  height="500" width="220">
+</p>
+
+
 Installation
 Before installing freeswitch-chatGPT, make sure you have the following prerequisites:
 
