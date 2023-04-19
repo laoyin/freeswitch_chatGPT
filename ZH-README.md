@@ -1,4 +1,7 @@
 
+
+[查看freeswitch-chatGPT demo视频](https://www.zhihu.com/pin/1632180684897804288)
+
 本项目基于讯飞asr， python后端 实现
 
 使用mrcp协议，mrcp-server参考前辈的项目，项目已经没有维护了，因此做了所有坑的填补，src/mrcp 需要修改自己的 讯飞appid即可。
