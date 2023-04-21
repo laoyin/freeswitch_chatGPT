@@ -1,7 +1,7 @@
 
 
 [查看freeswitch-chatGPT demo视频](https://www.zhihu.com/pin/1632180684897804288)
-
+=====
 
 
 本项目，实现了freeswitch-sip-电话和 chatGPT的连通。
