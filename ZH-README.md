@@ -2,10 +2,24 @@
 
 [查看freeswitch-chatGPT demo视频](https://www.zhihu.com/pin/1632180684897804288)
 
-本项目基于讯飞asr， python后端 实现
+
+
+本项目，实现了freeswitch-sip-电话和 chatGPT的连通。
+
+如何实现需要：
+a: 部署freeswitch： 可以使用docker方式： [docker 部署 fs](https://github.com/laoyin/freeswitch_docker_file)
+
+
+
+b: 部署对应的asr、mrcp服务。
+mrcp-server 你可以选择第三方的【百度】【腾讯】或者自研，这里提供的是基于讯飞的自研mrcp-server方式
+
+asr：你可以根据media-bug 自研。
+
+
+mrcp-server：参考下方
 
 使用mrcp协议，mrcp-server参考前辈的项目，项目已经没有维护了，因此做了所有坑的填补，src/mrcp 需要修改自己的 讯飞appid即可。
-
 
 
 【mrcp-server服务编译运行的坑，现在可以替换appid后直接使用】
@@ -141,8 +155,7 @@ Channel-Identifier: ede2ac36452811ec@speec
 
 配置完成后，启动看不见报错，说明ok了。
 
-
-
+c：配置路由，获取asr监听
 
 
 写上路由: 不用lua，用python
@@ -166,7 +179,7 @@ Channel-Identifier: ede2ac36452811ec@speec
    </extension>
 ```
 
-
+d：实现asr和文字nlp对话
 
 ```
 #encoding=utf-8
@@ -301,6 +314,8 @@ class Synthesizer:
 以上为freeswitch-mrcp协议的配置和使用
 
 
+f:接入open ai chatGPT
+
 以下是对接open-ai的 流式接口，使用websocket方式。
 
 open ai
@@ -308,3 +323,5 @@ open ai
 <p align="center">
 <img src="https://github.com/laoyin/freeswitch_chatGPT/blob/main/src/open_ai/7_1679898071.gif"  height="500" width="220">
 </p>
+
+使用open ai python ask等方式。
