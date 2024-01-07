@@ -16,6 +16,8 @@ mrcp-server 你可以选择第三方的【百度】【腾讯】或者自研，�
 
 asr：你可以根据media-bug 自研。
 
+mrcp-server：你可以联系 qq：263733228， 自研mrcp-server，能够实现asr、实时语音转写质检等。
+
 
 mrcp-server：参考下方
 
