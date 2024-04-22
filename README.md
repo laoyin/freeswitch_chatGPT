@@ -122,4 +122,9 @@ Contributions are welcome! Please see the CONTRIBUTING file for guidelines.
 Contact
 For questions or feedback, please contact me at 2637332218@qq.com
 
-[欢迎打赏-咨询](https://github.com/laoyin/java-sip-mrcp/blob/master/audio/200-zixun.jpg)
+<p align="center">
+  欢迎打赏-咨询
+<img src="[https://github.com/laoyin/freeswitch_chatGPT/blob/main/src/open_ai/7_1679898071.gif](https://github.com/laoyin/java-sip-mrcp/blob/master/audio/200-zixun.jpg)"  height="500" width="220">
+</p>
+
+
