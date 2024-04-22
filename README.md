@@ -11,7 +11,7 @@ freeswitch-chatGPT is an open-source project aimed at integrating FreeSWITCH wit
 open ai
 
 <p align="center">
-<img src="https://github.com/laoyin/freeswitch_chatGPT/blob/main/src/open_ai/7_1679898071.gif"  height="500" width="220">
+<img src="https://github.com/laoyin/freeswitch_chatGPT/blob/main/src/open_ai/7_1679898071.gif"  height="500" width="300">
 </p>
 
 
@@ -124,7 +124,7 @@ For questions or feedback, please contact me at 2637332218@qq.com
 
 <p align="center">
   欢迎打赏-咨询
-<img src="https://github.com/laoyin/java-sip-mrcp/blob/master/audio/200-zixun.jpg"  height="500" width="220">
+<img src="https://github.com/laoyin/java-sip-mrcp/blob/master/audio/200-zixun.jpg"  height="500" width="450">
 </p>
 
 
