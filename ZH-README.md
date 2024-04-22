@@ -4,6 +4,12 @@
 =====
 
 
+<p align="center">
+  欢迎打赏-咨询
+<img src="https://github.com/laoyin/java-sip-mrcp/blob/master/audio/200-zixun.jpg"  height="500" width="450">
+</p>
+
+
 本项目，实现了freeswitch-sip-电话和 chatGPT的连通。
 
 如何实现需要：
